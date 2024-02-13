@@ -14,10 +14,19 @@ public class Main {
         System.out.println("");
 
         myLinkedList.prepend(1);
+        myLinkedList.printList();
+        myLinkedList.get(0);
+        System.out.println("\nValue of index 0: " + myLinkedList.get(0).value);
 
-        System.out.println("Removed: " + myLinkedList.removeLast().value); // This code prints the removed node.
         System.out.println("Removed: " + myLinkedList.removeLast().value);
-        System.out.println(myLinkedList.removeLast()); // Notice how there is no .value This is because it is null.
+        System.out.println("Removed: " + myLinkedList.removeFirst().value);
+
+        myLinkedList.printList();
+        System.out.println("\nValue of index 0: " + myLinkedList.get(0).value);
+
+        // Note that if the LinkedList is left empty after removing an item
+        // Printing it with .value at the end will cause an error.
+        // if omitted then it will work correctly and print
 
     }
 }
